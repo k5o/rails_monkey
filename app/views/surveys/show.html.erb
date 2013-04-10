@@ -1,0 +1,13 @@
+<h1><%= @survey.title %></h1>
+
+<%= form_for @completion do |c| %> 
+	<% @completion.answers.each_with_index do |answer, i| %>
+		<%= c.fields_for :answers, answer do |a| %>
+			<h3><%= @questions[i].content %></h3>
+			<% @questions[i].choices.each do |choice| %>
+		    <%= a.radio_button(:choice_id, choice.id) %> <%= choice.content %><BR>
+			<% end %>
+		<% end %>
+	<% end %>
+	<%= c.submit %>
+<% end %>
