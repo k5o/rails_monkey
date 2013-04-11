@@ -9,5 +9,6 @@
 			<% end %>
 		<% end %>
 	<% end %>
-	<%= c.submit %>
+	<%= c.hidden_field :survey_id, :value => @survey.id %>
+	<%= c.submit "Submit Survey" %>
 <% end %>

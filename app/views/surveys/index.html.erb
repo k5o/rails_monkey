@@ -1,0 +1,11 @@
+<h1><span id="a">H</span><span id="b">i</span> <span id="c">S</span><span id="d">h</span><span id="e">a</span><span id="f">d</span><span id="g">y</span></h1>
+<%= link_to "New Survey", new_survey_path %>
+<BR>
+<BR>
+<ul>
+<% @surveys.each do |survey| %>
+	<li>
+		<%= link_to survey.title, survey %>
+	</li>
+<% end %>
+</ul>

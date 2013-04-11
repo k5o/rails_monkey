@@ -1,0 +1,33 @@
+h1 {
+	background-color: #ccc;
+	border: solid red 1px;
+	text-align: center;
+}
+
+h1 span#a {
+	color: red;
+}
+
+h1 span#b {
+	color: orange;
+}
+
+h1 span#c {
+	color: yellow;
+}
+
+h1 span#d {
+	color: green;
+}
+
+h1 span#e {
+	color: blue;
+}
+
+h1 span#f {
+	color: indigo;
+}
+
+h1 span#g {
+	color: violet;
+}

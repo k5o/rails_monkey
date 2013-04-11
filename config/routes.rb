@@ -1,9 +1,8 @@
 RailsMonkey::Application.routes.draw do
   root :to => 'surveys#index'
-  resources :questions
-  resources :answers
-  resources :surveys
-  resources :completions
+  resources :questions, :only => [:new, :create, :show]
+  resources :surveys, :only => [:index, :new, :create, :show]
+  resources :completions, :only => [:create]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

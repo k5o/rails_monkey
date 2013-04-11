@@ -9,11 +9,11 @@
     <%= s.fields_for :questions, question do |q| %>
     <BR><BR>
     	<%= q.label :content %>
-      <%= q.text_field :content %>
+      <%= q.text_field :content, :class => "question" %>
       <BR>
       <% question.choices.each do |choice| %>
         <%= q.fields_for :choices, choice do |c| %>
-          - Choice: <%= c.text_field :content %>
+          - Choice: <%= c.text_field :content, :class => "choice" %>
           <BR>
       	<% end %>	
       <% end %>
